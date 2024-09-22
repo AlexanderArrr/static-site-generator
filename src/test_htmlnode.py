@@ -15,7 +15,6 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_props_to_html(self):
         node = HTMLNode(tag='p', value='test', props={"href": "http://test.com",})
-        print(node.props)
         test_str = node.props_to_html()
         self.assertEqual(test_str, f' href="http://test.com"')
 
