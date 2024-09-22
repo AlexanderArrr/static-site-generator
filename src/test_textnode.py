@@ -50,7 +50,6 @@ class TestTextNode(unittest.TestCase):
     def test_html_conversion_image(self):
         node = TextNode("Alt Text", 'image', 'dir/image.jpg')
         node = textnode_to_htmlnode(node)
-        print(node.to_html())
         self.assertEqual(node.to_html(), '<img src="dir/image.jpg" alt="Alt Text"></img>')
 
 
