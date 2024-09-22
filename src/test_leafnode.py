@@ -18,7 +18,6 @@ class TestLeafNode(unittest.TestCase):
     def test_to_html(self):
         node = LeafNode(tag='a', value='test', props={"href": "http://test.com",})
         test_str = node.to_html()
-        print(test_str)
         self.assertEqual(test_str, f'<a href="http://test.com">test</a>')
 
     def test_to_html_no_tag(self):
