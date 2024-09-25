@@ -8,14 +8,14 @@ block_type_quote = "quote"
 block_type_unordered_list = "unordered_list"
 
 def markdown_to_blocks(markdown):
-    lines_list = markdown.split('\n\n')
-    filtered_lines = []
-    for line in lines_list:
-        if line == "":
+    blocks_list = markdown.split('\n\n')
+    filtered_blocks = []
+    for block in blocks_list:
+        if block == "":
             continue
-        line = line.strip()
-        filtered_lines.append(line)
-    return filtered_lines
+        block = block.strip()
+        filtered_blocks.append(block)
+    return filtered_blocks
 
 def block_to_block_type(block):
     if block.startswith('```') and block.endswith('```'):
